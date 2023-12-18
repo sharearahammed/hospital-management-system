@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
+import NavBar from '../Layout/navbar'
+import Footer from '../Layout/footer'
 
 export default function RegisterPage () {
   const [name, setName] = useState('');
@@ -144,8 +146,8 @@ export default function RegisterPage () {
   return (
     <>
      <title page="Registration"> </title>
+     <NavBar/>
 
-     <section class="h-screen">
   <div class="container h-full px-6 py-24">
     <div
       class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
@@ -223,27 +225,10 @@ export default function RegisterPage () {
       </div>
     </div>
   </div>
-</section>
+
+<Footer/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <div align="center" class="">
-
-      
-  </div>
 
 
 

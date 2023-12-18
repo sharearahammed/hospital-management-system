@@ -17,42 +17,49 @@ export default function Body(){
   >
     <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Let us find your
+      Explore Comprehensive Cloud-Based Healthcare
 
-        <strong class="block font-extrabold text-rose-700"> Forever Home. </strong>
+        <strong class="block font-extrabold text-rose-700"> Software Solutions Tailored for Hospitals, Clinics,
+and Doctors.</strong>
       </h1>
 
-      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
+      <p class="text-left mt-4 max-w-lg sm:text-xl/relaxed">
+      Experience state-of-the-art digital solutions with DocPulse’s 
+CMS(Clinic Management Software), PMS(Patient Management Software),
+and HIMS(Hospital Integrated Management Software),
+designed to meet the unique needs of doctors, clinics, and hospitals.
       </p>
+      <div class="text-left">
+      <li>For Clinics</li>
+      <li>For Medical Center</li>
+      <li>For Hospitals</li>
+      <li>For Clinic Chains</li>
+      </div>
+      
 
       <div class="mt-8 flex flex-wrap gap-4 text-center">
         <a
-          href="#"
+          href="../doctor/registration/"
           class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
         >
-          Get Started
-        </a>
-
-        <a
-          href="#"
-          class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-        >
-          Learn More
+          REQUEST DEMO
         </a>
       </div>
     </div>
   </div>
 </section>
-<div>
-<a href="#!">
-      <img
-        class="rounded-t-lg sm:rounded-tr-none"
-        href="https://thumbs.dreamstime.com/z/young-man-doctor-white-uniform-withholding-time-clock-hospital-concept-hour-emergency-alarm-management-aid-patient-to-183226468.jpg"
-        alt="Hollywood Sign on The Hill" />
+<br></br>
+<br></br>
+<br></br>
+<div class="text-center">
+    <a href="#!">
+        <img
+            class="h-40 mx-auto w-1/2 sm:w-auto rounded-t-lg sm:rounded-tr-none"
+            src="https://cdn.vectorstock.com/i/1000x1000/23/08/healthcare-management-vector-8132308.webp"
+            alt="Hollywood Sign on The Hill" />
     </a>
 </div>
+
         
         </>
     )

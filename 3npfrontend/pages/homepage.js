@@ -4,6 +4,7 @@
  import NavBar from './Layout/navbar'
  import Body from './Layout/body'
  import Card from './Layout/card'
+ import Cardtwo from './Layout/card2'
  import Footer from './Layout/footer'
 
 
@@ -19,6 +20,7 @@ export default function Home() {
       <NavBar/>
       <Body/>
       <br></br>
+
       <Card/>
       <br></br>
       <br></br>

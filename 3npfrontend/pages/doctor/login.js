@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Header from "../header";
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import NavBar from '../Layout/navbar'
+import Footer from '../Layout/footer'
 
 export default function LoginForm () {
 const [email, setEmail] = useState('');
@@ -52,6 +54,7 @@ const isValidEmail = (email) => {
     };
     return (
     <>
+    <NavBar/>
     <Header title="Login Page"/>
 
 <div class="h-screen">
@@ -140,6 +143,7 @@ const isValidEmail = (email) => {
     </div>
   </div>
 </div>
+<Footer/>
 
 
 
