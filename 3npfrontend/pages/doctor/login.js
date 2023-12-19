@@ -32,7 +32,7 @@ setError('Invalid email address');
 const res = await doctorlogin();
 console.log(res);
 if(res.message=="success"){
-    router.push('./'+email);
+    router.push('profile');
 }
 else{ 
     setError('user not found');
@@ -41,7 +41,8 @@ else{
 };
 async function doctorlogin() {
     try {
-    const response = await axios.post(process.env.NEXT_PUBLIC_API_ENDPOINT +'/doctor/doctorlogin', {username:email, password :password});
+    const response = await axios.post(process.env.NEXT_PUBLIC_API_ENDPOINT +'/doctor/doctorlogin', {username:email, password :password},
+    {withCredentials:true});
     // console.log(response.data);
     return response.data;
     } catch (error) {

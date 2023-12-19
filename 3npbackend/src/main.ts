@@ -8,15 +8,21 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(
     session({
-    secret: 'my-secret',
+    secret: 'my_secret',
     resave: false,
     saveUninitialized: false,
-    cookie:{
-    maxAge: 300000
-    }
+  cookie:{
+    secure: false,
+    httpOnly: false,
+    maxAge: 3000000
+          }
     }),
-    );
-    app.enableCors();
+   );
+    app.enableCors({
+      origin: true,
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+      credentials: true,
+      });
   await app.listen(3000);
 }
 bootstrap();
