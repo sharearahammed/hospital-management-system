@@ -235,6 +235,12 @@ uploadFile(@UploadedFile() file: Express.Multer.File) {
   return "sucessfull";
   }
 
+  @Get('/searchusername/:username')
+  async getUserByUsername(@Param('username')  username: string,@Session() session): Promise<Partial<DoctorEntity> | null> {
+    return this.DoctorService.getbyusername(username);
+  }
+  
+
 
 
 }

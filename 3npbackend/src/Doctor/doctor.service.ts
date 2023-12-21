@@ -160,5 +160,15 @@ async updatePutpatientByid(id: number, updatedUser: Patientinfo): Promise<patien
       }
 }
 
+async  getbyusername(username: string): Promise<Partial<DoctorEntity> | null>  {
+  return this.doctorRepo.findOne(
+    {
+      where: { username }, // Find the user by username
+      select: ['name', 'username'],
+     
+    }
+  );
+}
+
 
 }
