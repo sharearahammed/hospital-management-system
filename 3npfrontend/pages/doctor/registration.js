@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import NavBar from '../Layout/navbar'
+import NavBar from '../Layout/homeNavbar'
 import Footer from '../Layout/footer'
 
 export default function RegisterPage () {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from "../header";
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import NavBar from '../Layout/navbar'
+import NavBar from '../Layout/homeNavbar'
 import Footer from '../Layout/footer'
 
 export default function LoginForm () {
@@ -31,8 +31,8 @@ setError('Invalid email address');
 // router.push('.profile');
 const res = await doctorlogin();
 console.log(res);
-if(res.message=="success"){
-    router.push('profile');
+if(res && res.message=="success"){
+    router.push('profile',{res});
 }
 else{ 
     setError('user not found');

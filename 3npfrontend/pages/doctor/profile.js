@@ -1,7 +1,8 @@
 import React from "react"
 import { useEffect } from "react"
 import axios from 'axios';
-export default function Profile() {
+import ProfileNavbar from '../Layout/profileNavbar'
+export default function Profile({router}) {
   const [data, setData] = React.useState([])
   useEffect(() => {
     const getData = async () => {
@@ -19,6 +20,7 @@ export default function Profile() {
   })
   return (
     <>
+    <ProfileNavbar/>
  
  
       <h1>This CSR request!</h1>
@@ -29,10 +31,11 @@ export default function Profile() {
  
       <ul>
  
-        {data.map(item => (
-          <li key={item.id}>
-         <h1>Name: {item.name}</h1>  
-          <h1>Email: {item.username}</h1>
+        {data.map(user => (
+          
+          <li key={user.id}>
+         <h1>Name: {user.name}</h1>  
+          <h1>Email: {user.username}</h1>
             </li>
         ))}
       </ul>

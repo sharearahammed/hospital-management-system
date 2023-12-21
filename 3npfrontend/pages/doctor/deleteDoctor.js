@@ -18,7 +18,7 @@ export default function DeleteUser () {
   async function deleteData() {
    try {
     
-     const response = await axios.delete(process.env.NEXT_PUBLIC_API_ENDPOINT +'/doctor/deleteDoctor/1');
+     const response = await axios.delete(process.env.NEXT_PUBLIC_API_ENDPOINT +'/doctor/deleteDoctor/4');
      console.log('Data deleted successfully');
      } catch (error) {
      console.error(error);
@@ -29,23 +29,23 @@ export default function DeleteUser () {
   return (
     <>
      <title page="Delete"> </title>
-
-     <section class="h-screen">
-  <div class="container h-full px-6 py-24">
+     
+     <section align="center" class="h-screen">
+  <div class="">
     <div
-      class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+      class="">
       
-      <div  class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+      <div  class="">
+          <div class="">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Delete your Account
+              Are you sure delete this account?
               </h1>
               <form class="space-y-4 md:space-y-6" action="#" onSubmit={handleSubmitdelete}>
 
 
                   {error && <p>{error}</p>}
                   <div align="center">
-                  <button type="submit" class="bg-green-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-green-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 active:scale-95">Update</button>
+                  <button type="submit" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
                   </div>
               </form>
           </div>

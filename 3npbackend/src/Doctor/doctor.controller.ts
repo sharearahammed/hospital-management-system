@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query ,Delete,Body, Put,Post, Patch, UsePipes, ValidationPipe, UploadedFile, UseInterceptors, Res, Session, UseGuards } from '@nestjs/common';
+import { Controller, Get, Param, Query ,Delete,Body, Put,Post, Patch, UsePipes, ValidationPipe, UploadedFile, UseInterceptors, Res, Session, UseGuards, Req } from '@nestjs/common';
 import { DoctorService } from './doctor.service';
 import { Doctorinfo} from './doctor.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
@@ -18,6 +18,7 @@ export class DoctorController {
   getHello(): string {
     return "hello Me";
   }
+
   
   @Get('/index')
   @UseGuards(SessionGuard)
@@ -63,6 +64,7 @@ export class DoctorController {
   getAllDoctors(@Body() user:Doctorinfo ) {
     return this.DoctorService.getAllDoctors();
   }
+
   //Find All Doctors
   @Get('/getAllPatients')
   getAllPatients(@Body() user:Patientinfo ) {
