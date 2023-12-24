@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query ,Delete,Body, Put,Post, Patch, UsePipes, ValidationPipe, UploadedFile, UseInterceptors, Res, Session, UseGuards, Req } from '@nestjs/common';
+import { Controller, Get, Param, Query ,Delete,Body, Put,Post, Patch, UsePipes, ValidationPipe, UploadedFile, UseInterceptors, Res, Session, UseGuards, Req, UnauthorizedException } from '@nestjs/common';
 import { DoctorService } from './doctor.service';
 import { Doctorinfo} from './doctor.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
@@ -239,6 +239,20 @@ uploadFile(@UploadedFile() file: Express.Multer.File) {
   async getUserByUsername(@Param('username')  username: string,@Session() session): Promise<Partial<DoctorEntity> | null> {
     return this.DoctorService.getbyusername(username);
   }
+
+  //logout
+  @Post('/logout')
+  signout(@Session() session)
+{
+  if(session.destroy())
+  {
+    return {message:"you are logged out"};
+  }
+  else
+  {
+    throw new UnauthorizedException("invalid actions");
+  }
+}
   
 
 

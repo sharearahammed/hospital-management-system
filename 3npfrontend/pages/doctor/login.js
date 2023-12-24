@@ -32,6 +32,8 @@ setError('Invalid email address');
 const res = await doctorlogin();
 console.log(res);
 if(res && res.message=="success"){
+    console.log("cookie: " + document.cookie);
+    //login(email, document.cookie);
     router.push('profile',{res});
 }
 else{ 
@@ -56,6 +58,7 @@ const isValidEmail = (email) => {
     return (
     <>
     <NavBar/>
+    <link rel="icon" type="image/x-icon" href="hospital.jpg"/>
     <Header title="Login Page"/>
 
 <div class="h-screen">
@@ -75,25 +78,26 @@ const isValidEmail = (email) => {
         <form onSubmit={handleSubmit}>
           
           <div class="relative mb-6" data-te-input-wrapper-init>
-            <input
-              type="text" name="email" value={email} onChange={handleChangeEmail}
-              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleFormControlInput3"
-              placeholder="Email address" />
+          <input
+    type="text" name="email" value={email} onChange={handleChangeEmail}
+    class="peer block min-h-[auto] w-full rounded border-0 bg-slate-500 text-white px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+    id="exampleFormControlInput3"
+    placeholder="Email address" />
             <label
               for="exampleFormControlInput3"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-slate-950 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
               >Email address
             </label>
           </div>
 
          
           <div class="relative mb-6" data-te-input-wrapper-init>
-            <input
-              type="password" name="password" value={password} onChange={handleChangePassword}
-              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleFormControlInput33"
-              placeholder="Password" />
+          <input
+    type="password" name="password" value={password} onChange={handleChangePassword}
+    class="peer block min-h-[auto] w-full rounded border-0 bg-slate-500 text-white px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+    id="exampleFormControlInput33"
+    placeholder="Password"
+/>
             <label
               for="exampleFormControlInput33"
               class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -145,8 +149,6 @@ const isValidEmail = (email) => {
   </div>
 </div>
 <Footer/>
-
-
 
 
 

@@ -122,18 +122,18 @@ export default function RegisterPage () {
      console.error(error);
      }
     }
+    const isValidUsername = (username) => {
+      const emailPattern = /^\S+@\S+\.\S+$/;
+      return emailPattern.test(username);
+      };
 
     const isValidAge = (age) =>
     {
       return !isNaN(age) && parseInt(age) >= 1 && parseInt(age) <= 100;
     };
-    const isValidUsername = (username) => 
-    {
-      const usernameRegex = /^[a-z0-9]+$/;   
-      return usernameRegex.test(username); 
-    };
 
-    // const validateFile = (profilepic) => {
+
+    // const validateFile = (profilepic) => { 
            
     //         const allowedtypes = ["image.jpg", "image.png"];
    
@@ -171,7 +171,7 @@ export default function RegisterPage () {
                       <input type="text" name="name" value={name} onChange={handleChangeName} id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="your fullname" required=""/>
                   </div>
                   <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your username</label>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your username or email</label>
                       <input type="text" name="username" value={username} onChange={handleChangeUsername} id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required=""/>
                   </div>
                   <div>

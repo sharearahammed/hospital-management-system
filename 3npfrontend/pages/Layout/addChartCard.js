@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import NavBar from '../Layout/homeNavbar'
+import Footer from '../Layout/footer'
 
 export default function ShoppingCart() {
   const [cartItems, setCartItems] = useState([]);
@@ -26,7 +28,10 @@ export default function ShoppingCart() {
   };
 
   return (
+    
+    
     <div className="container mx-auto p-4 bg-gradient-to-r from-yellow-300 to-pink-500">
+      <NavBar/>
       <nav className="bg-purple-800 p-4 mb-4 rounded-md">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-white">Medicine Shopping Cart</h1>
@@ -148,6 +153,9 @@ export default function ShoppingCart() {
           </ul>
         </div>
       </div>
+      <br></br>
+      <br></br>
+      <Footer/>
     </div>
   );
 }
