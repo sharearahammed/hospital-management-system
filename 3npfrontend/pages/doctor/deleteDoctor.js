@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import ProfileNavbar from '../Layout/profileNavbar'
 
 export default function DeleteUser () {
   const [error, setError] = useState('');
@@ -29,6 +30,7 @@ export default function DeleteUser () {
   return (
     <>
      <title page="Delete"> </title>
+     <ProfileNavbar/>
      
      <section align="center" class="h-screen">
   <div class="">

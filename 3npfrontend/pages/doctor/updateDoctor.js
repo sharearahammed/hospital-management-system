@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import ProfileNavbar from '../Layout/profileNavbar'
 
 export default function UpdateUser () {
   const [name, setName] = useState('');
@@ -62,6 +63,7 @@ export default function UpdateUser () {
   return (
     <>
      <title page="Registration"> </title>
+     <ProfileNavbar/>
 
      <section class="h-screen">
   <div class="container h-full px-6 py-24">

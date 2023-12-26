@@ -38,13 +38,13 @@ export default function ProfileNavbar() {
         </div>
       </div>
       <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <li>
+        <li class="bg-white">
           <a class="justify-between" href="../Layout/profileCard"  >
             Profile
             <span class="badge">New</span>
           </a>
-        </li>
-        <li><a href="../doctor/authcontext"><button onClick={handleLogout}>Logout</button></a></li>
+        </li><br></br>
+        <li class="bg-white"><a href="../doctor/login"><button onClick={handleLogout}>Logout</button></a></li>
       </ul>
     </div>
   </div>

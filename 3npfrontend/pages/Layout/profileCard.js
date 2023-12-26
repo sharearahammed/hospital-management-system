@@ -1,9 +1,9 @@
-
+import ProfileNavbar from '../Layout/profileNavbar'
 
 export default function ProfileCard(){
     return(
         <>
-        
+        <ProfileNavbar/>
 <div class="flex items-center h-screen w-full justify-center">
 
 <div class="max-w-xs">
